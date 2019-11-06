@@ -5,7 +5,7 @@ val dockerGraalvmNativeImageName = settingKey[String]("Name of the generated doc
 
 lazy val commonSettings = commonSmlBuildSettings ++ Seq(
   organization := "com.softwaremill.graalvm",
-  scalaVersion := "2.12.8"
+  scalaVersion := "2.12.10"
 )
 
 lazy val rootProject = (project in file("."))
@@ -87,6 +87,6 @@ lazy val core: Project = (project in file("core"))
     },
     graalVMNativeImageOptions := Seq("--report-unsupported-elements-at-runtime"),
     libraryDependencies ++= Seq(
-      "io.monix" %% "monix" % "3.0.0-RC2"
+      "io.monix" %% "monix" % "3.0.0"
     )
   )
